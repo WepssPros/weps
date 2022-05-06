@@ -227,7 +227,10 @@
                                         lg:border-l-0 lg:border-b-4 lg:pl-0">Dashboard -
                                         Vendors
                                     </a>
+
                                     @endif
+                                    <a href="{{ route('profile.show') }}" class="py-3 pl-3 mx-2 border-l-4 border-transparent cursor-pointer lg:mx-9
+                                        lg:border-l-0 lg:border-b-4 lg:pl-0">Setting Profile</a>
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
                                         <button
@@ -238,6 +241,7 @@
                                     @else
                                     <a href="{{ route('login') }}" class="py-3 pl-3 mx-2 border-l-4 border-transparent cursor-pointer lg:mx-9
                                         lg:border-l-0 lg:border-b-4 lg:pl-0">Log in</a>
+
 
                                     @if (Route::has('register'))
                                     <a href="{{ route('register') }}" class="py-3 pl-3 mx-2 border-l-4 border-transparent cursor-pointer lg:mx-9

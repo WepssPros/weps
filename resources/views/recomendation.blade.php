@@ -271,9 +271,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex inline-flex items-center justify-center gap-5 flex-row"> <a href="#"
+                <div class="flex items-center justify-center gap-5 flex-row"> <a href="{{url('/')}}"
                         class="px-6 py-4 text-center bg-green-400 rounded-lg"> <span
-                            class="text-base font-semibold text-dark-2">Get Started</span> </a> <a href="#"
+                            class="text-base font-semibold text-dark-2">Get Started</span> </a> <a href="{{url('/')}}"
                         class="              px-6              py-4              text-center              bg-white              border border-gray-400              rounded-lg            ">
                         <span class="text-base font-semibold text-nogrey">Read Story</span> </a> </div>
             </main>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Helpers\ResponseFormatter;
 use App\Http\Controllers\Controller;
 use App\Models\ProductVendor;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProductVendorController extends Controller
@@ -13,6 +14,7 @@ class ProductVendorController extends Controller
     {
         $id = $request->input('id');
         $limit = $request->input('limit');
+        $users = $request->input('users_id');
         $name = $request->input('name');
 
         $show_vendor = $request->input('show_vendor');
@@ -36,10 +38,13 @@ class ProductVendorController extends Controller
             }
         }
 
-        $vendor = ProductVendor::query();
+        $vendor = ProductVendor::with(['users','products']);
 
         if($name){
             $vendor->where('name', 'like', '%' . $name . '%');
+        }
+         if($users){
+            $vendor->where('user', $users);
         }
 
         if($show_vendor) {

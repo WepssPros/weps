@@ -17,13 +17,13 @@ class ProductController extends Controller
         $tags = $request->input('tags');
         $categories = $request->input('categories');
         $vendors = $request->input('vendors');
-
+        $users = $request->input('users');
         $price_from = $request->input('price_from');
         $price_to = $request->input('price_to');
 
         if($id)
         {
-            $product = Product::with(['category','galleries','vendor'])->find($id);
+            $product = Product::with(['category','galleries','vendor','user'])->find($id);
 
             if($product) {
                 return ResponseFormatter::success(
@@ -40,7 +40,7 @@ class ProductController extends Controller
             }
         }
 
-        $product = Product::with(['category','galleries','vendor']);
+        $product = Product::with(['category','galleries','vendor','user']);
 
         if($name){
             $product->where('name', 'like', '%' . $name . '%');
@@ -62,6 +62,9 @@ class ProductController extends Controller
         }
         if($vendors){
             $product->where('vendors', $vendors);
+        }
+        if($users){
+            $product->where('user', $users);
         }
 
 

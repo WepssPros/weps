@@ -138,7 +138,7 @@
                                 class="mt-8 text-xl font-normal leading-8 hero-description text-subtleGreen lg:leading-9 md:text-2xl">
                                 Learn how to manage your business efficiently with a platform trusted by global leaders.
                             </div>
-                            <div class="mt-32"> <a href=""
+                            <div class="mt-32"> <a href="{{url('/')}}"
                                     class="px-10 py-4 text-2xl font-semibold rounded-lg bg-white-2 text-darkGreen">Get
                                     Started</a> </div>
                         </div>
@@ -303,7 +303,7 @@
                                 More</a> </div>
                     </div>
                 </div> <!-- GALLERY IMAGE -->
-                <div class="grid w-full overflow-hidden overflow-hidden overflow-x-scroll hide-scroll draggable">
+                <div class="grid w-full overflow-hidden  overflow-x-scroll hide-scroll draggable">
                     <div>
                         <div class="flex flex-row explore-gallery mt-14 ">
                             <div class="px-3 pr-0 image-explore md:px-0 md:pr-16"> <img
