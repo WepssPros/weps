@@ -80,7 +80,7 @@
 
 
 {{-- Template Analisis nanti  --}}
-<div id="pre-container " class="grid grid-cols-1 gap-6 mt-2 md:grid-cols-2      ">
+<div id="pre-container " class="grid grid-cols-1 gap-6 mt-2 md:grid-cols-3     ">
     <div
         class="p-4 transition-shadow border  hover:shadow-lg items-center justify-center  bg-white rounded-md shadow-md">
         <table id="crudTable" class="hidden">
@@ -91,7 +91,9 @@
                     <th>Alamat</th>
                     <th>Total Harga</th>
                     <th>Vendor</th>
+                    <th>Produk</th>
                     <th>Status</th>
+                    <th>Tanggal</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -106,8 +108,30 @@
                     <th>ID</th>
                     <th>Nama</th>
                     <th>Alamat</th>
+                    <th>Vendor</th>
+                    <th>Produk</th>
                     <th>Total Harga</th>
                     <th>Status</th>
+                    <th>Tanggal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div
+        class="p-4 transition-shadow border  hover:shadow-lg items-center justify-center  bg-white rounded-md shadow-md">
+        <table id="crudTable2" class="hidden">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Vendor</th>
+                    <th>Produk</th>
+                    <th>Total Harga</th>
+                    <th>Status</th>
+                    <th>Tanggal</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -138,16 +162,24 @@
                     name: 'user.address'
                 },
                 {
-                    data: 'total_price',
-                    name: 'total_price'
-                },
-                {
                     data: 'vendor.name',
                     name: 'vendor.name'
                 },
                 {
                     data: 'product.name',
                     name: 'product.name'
+                },
+                {
+                    data: 'total_price',
+                    name: 'total_price'
+                },
+                {
+                    data: 'transaction.status',
+                    name: 'transaction.status'
+                },
+                {
+                    data: 'transaction.created_at',
+                    name: 'transaction.created_at'
                 },
                 {
                     data: 'action',
@@ -212,7 +244,7 @@
 
         // Count the number of entries for each position
         table
-            .column(5, {
+            .column(6, {
                 search: 'applied'
             })
             .data()
@@ -256,12 +288,24 @@
                     name: 'user.address'
                 },
                 {
+                    data: 'vendor.name',
+                    name: 'vendor.name'
+                },
+                {
+                    data: 'product.name',
+                    name: 'product.name'
+                },
+                {
                     data: 'total_price',
                     name: 'total_price'
                 },
                 {
-                    data: 'vendor.name',
-                    name: 'vendor.name'
+                    data: 'transaction.status',
+                    name: 'transaction.status'
+                },
+                {
+                    data: 'transaction.created_at',
+                    name: 'transaction.created_at'
                 },
                 {
                     data: 'action',
@@ -326,6 +370,132 @@
 
         // Count the number of entries for each position
         table
+            .column(3, {
+                search: 'applied'
+            })
+            .data()
+            .each(function (val) {
+                if (counts[val]) {
+                    counts[val] += 1;
+                } else {
+                    counts[val] = 1;
+                }
+            });
+
+        // And map it to the format highcharts uses
+        return $.map(counts, function (val, key) {
+            return {
+                name: key,
+                y: val,
+            };
+        });
+    }
+
+</script>
+<script>
+    $(document).ready(function () {
+        // Create DataTable
+        var table = $('#crudTable2').DataTable({
+            ajax: {
+                url: '{!! url()->current() !!}',
+            },
+            columns: [{
+                    data: 'id',
+                    name: 'id',
+                    width: '5%'
+                },
+                {
+                    data: 'user.name',
+                    name: 'user.name'
+                },
+                {
+                    data: 'user.address',
+                    name: 'user.address'
+                },
+                {
+                    data: 'vendor.name',
+                    name: 'vendor.name'
+                },
+                {
+                    data: 'product.name',
+                    name: 'product.name'
+                },
+                {
+                    data: 'total_price',
+                    name: 'total_price'
+                },
+
+                {
+                    data: 'transaction.status',
+                    name: 'transaction.status'
+                },
+                {
+                    data: 'transaction.created_at',
+                    name: 'transaction.created_at'
+                },
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: false,
+                    searchable: false,
+                    width: '10%'
+                },
+            ],
+        });
+
+        // Create the chart with initial data
+        var container = $('<div/>').insertBefore(table.table().container());
+
+        var chart = Highcharts.chart(container[0], {
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45,
+                    beta: 0
+                }
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    depth: 35,
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}'
+                    },
+                    showInLegend: true,
+                },
+
+            },
+            title: {
+                text: 'Status Pemesanan Produk',
+            },
+            series: [{
+                data: chartDatax(table),
+
+            }, ],
+        });
+
+
+        // On each draw, update the data in the chart
+        table.on('draw', function () {
+            chart.series[0].setData(chartDatax(table));
+        });
+
+
+    });
+
+    function chartDatax(table) {
+        var counts = {};
+
+        // Count the number of entries for each position
+        table
             .column(4, {
                 search: 'applied'
             })
@@ -348,6 +518,4 @@
     }
 
 </script>
-
-
 @endsection
