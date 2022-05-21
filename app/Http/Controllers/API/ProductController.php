@@ -58,13 +58,13 @@ class ProductController extends Controller
             $product->where('price', '<=', $price_to);
         }
         if($categories){
-            $product->where('categories', $categories);
+            $product->where('categories_id', $categories);
         }
         if($vendors){
-            $product->where('vendors', $vendors);
+            $product->where('vendors_id', $vendors);
         }
         if($users){
-            $product->where('user', $users);
+            $product->where('users_id', $users);
         }
 
 
