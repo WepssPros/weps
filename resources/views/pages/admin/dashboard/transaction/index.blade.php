@@ -29,6 +29,8 @@
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>Total Harga</th>
+                            <th>Tanggal Acara</th>
+                            <th>Tanggal Pemesanan</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
@@ -48,8 +50,7 @@
         ajax: {
             url: '{!! url()->current() !!}',
         },
-        columns: [
-            {
+        columns: [{
                 data: 'id',
                 name: 'id',
                 width: '5%'
@@ -66,6 +67,15 @@
                 data: 'total_price',
                 name: 'total_price'
             },
+            {
+                data: 'tgl_acara',
+                name: 'tgl_acara'
+            },
+            {
+                data: 'created_at',
+                name: 'created_at'
+            },
+
             {
                 data: 'status',
                 name: 'status'

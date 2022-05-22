@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Calonvendor;
 use App\Models\Transaction;
 use App\Models\TransactionItem;
 use Illuminate\Http\Request;
@@ -12,6 +13,12 @@ class DashboardController extends Controller
 {
     public function index()
     {
+
+         $transactions = Transaction::with(['user'])->latest()->paginate(5);
+         $calonvendors = Calonvendor::with(['user'])->latest()->paginate(5);
+
+
+
         if(request()->ajax()) {
             $query = TransactionItem::with(['product','vendor','user','transaction']);
 
@@ -36,6 +43,9 @@ class DashboardController extends Controller
                 ->make();
         }
 
-        return view('pages.admin.dashboard.index');
+        return view('pages.admin.dashboard.index', [
+             'transactions' => $transactions,
+             'calonvendors' => $calonvendors,
+        ]);
     }
 }
