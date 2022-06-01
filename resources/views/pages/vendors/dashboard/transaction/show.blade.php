@@ -439,125 +439,224 @@
 
         <!-- Print Template -->
         <div id=" js-print-template" x-ref="printTemplate" class="hidden">
-            <div class="mb-8 flex justify-between">
-                <div>
-                    <h2 class="text-3xl font-bold mb-6 pb-2 tracking-wider uppercase">Invoice</h2>
+            <section class="py-1 bg-black">
+                <div class="max-w-5xl mx-auto py-5 bg-white">
+                    <article class="overflow-hidden">
+                        <div class="bg-[white] rounded-b-md">
+                            <div class="p-9">
+                                <div class="space-y-6 text-slate-700">
+                                    <svg width="50 " height="50" viewBox="0 0 131 151" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M129.08 113.525C128.268 114.704 127.442 115.069 127.442 115.069C127.442 115.069 77.2226 144.816 69.6397 149.242C69.1497 149.533 68.8873 149.689 68.8873 149.689C68.8873 149.689 67.7706 150.424 65.916 150.391C64.0612 150.447 62.9352 149.726 62.9352 149.726C62.9352 149.726 62.6688 149.572 62.1713 149.284C54.5146 144.939 3.96287 115.821 3.96287 115.821C3.96287 115.821 3.13235 115.466 2.30676 114.298C0.729672 112.843 0.677402 110.946 0.677402 110.946C0.677402 110.946 0.656168 106.88 0.623008 100.704C0.524741 86.075 0.353652 55.5653 0.300121 45.9411C0.291028 44.7344 0.282632 43.7045 0.275132 42.8844C0.261531 42.7333 0.238935 42.3807 0.265414 41.8957C0.259458 41.3413 0.254268 40.9654 0.249925 40.7911C0.17311 37.6856 3.99178 35.3291 3.99178 35.3291L61.4912 1.25988C62.7164 0.596637 63.9331 0.387224 65.0005 0.397001C66.0682 0.373924 67.288 0.568338 68.5219 1.21701L126.432 34.583C126.432 34.583 130.279 36.8928 130.24 39.9989C130.238 40.1733 130.238 40.5492 130.238 41.1036C130.271 41.5884 130.252 41.9415 130.241 42.0926C130.243 42.9118 130.247 43.9399 130.253 45.1446C130.317 54.7633 130.517 85.2798 130.597 99.9119C130.64 106.088 130.668 110.154 130.668 110.154C130.668 110.154 130.639 112.051 129.08 113.525ZM107.182 40.2807C95.325 33.4783 67.3916 17.3443 67.3916 17.3443C67.3916 17.3443 66.4462 16.8352 65.1008 16.7236C63.757 16.8516 62.818 17.3722 62.818 17.3722C62.818 17.3722 35.0832 33.8454 23.3101 40.7917L62.6204 64.5349C62.6204 64.5349 64.5126 65.7827 65.4168 68.5653C66.287 65.7719 68.1639 64.5011 68.1639 64.5011L107.182 40.2807ZM65.9597 83.5267L115.879 52.5276C115.898 55.2915 115.926 59.6539 115.958 64.6478L116.098 86.76C116.139 93.6112 116.169 99.0651 116.169 100.47C116.17 105.342 113.665 106.444 113.665 106.444C113.665 106.444 70.4842 131.941 67.6766 133.539C66.9976 133.838 66.3727 133.992 65.816 134.056C65.2585 133.999 64.6317 133.852 63.949 133.562C61.1221 131.998 17.6336 107.029 17.6336 107.029C17.6336 107.029 15.1154 105.957 15.0568 101.086C15.0401 99.6813 15.0038 94.2274 14.9616 87.3762L14.8314 65.264C14.8025 60.2701 14.7779 55.9076 14.7626 53.1437L65.0562 83.5322L65.0596 84.0857L65.5097 83.8062L65.9631 84.0802L65.9597 83.5267Z"
+                                            fill="#14CCD8" />
+                                    </svg>
 
-                    <div class="mb-1 flex items-center">
-                        <label class="w-32 text-gray-800 block font-bold text-xs uppercase tracking-wide">Invoice
-                            No.</label>
-                        <span class="mr-4 inline-block">:</span>
-                        <div x-text="invoiceNumber"></div>
-                    </div>
+                                    <p class="text-xl font-extrabold tracking-tight uppercase font-body">
+                                        Wedding Elektronik Salesman Program
+                                    </p>
+                                    <p class="text-xl font-extrabold tracking-tight uppercase font-body">
+                                        INVOICE
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="p-10">
+                                <div class="flex w-full">
+                                    <div class="grid grid-cols-4 gap-12">
+                                        <div class="text-sm font-light text-slate-500">
+                                            <p class="text-sm font-normal text-slate-700">
+                                                Invoice Detail:
+                                            </p>
+                                            <p>Pesanan Untuk Acara</p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->user->name}}</p>
+                                            <p>Alamat User</p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->user->address}}</p>
+                                            <p>Username </p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->user->username}}</p>
+                                        </div>
+                                        <div class="text-sm font-light text-slate-500">
+                                            <p class="text-sm font-normal text-slate-700">Billed To Acara</p>
+                                            <p>Nama Acara</p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->name_acara}} </p>
+                                            <p>Alamat Acara</p>
+                                            <p class="text-sm font-semibold text-slate-700"> {{$transaction->address}}
+                                            </p>
+                                            <p>No Telephon</p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->user->phone}}</p>
+                                        </div>
+                                        <div class="text-sm font-light text-slate-500">
+                                            <p class="text-sm font-normal text-slate-700">Tanggal Pemesanan</p>
 
-                    <div class="mb-1 flex items-center">
-                        <label class="w-32 text-gray-800 block font-bold text-xs uppercase tracking-wide">Invoice
-                            Date</label>
-                        <span class="mr-4 inline-block">:</span>
-                        <div x-text="invoiceDate"></div>
-                    </div>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->created_at}}</p>
 
-                    <div class="mb-1 flex items-center">
-                        <label class="w-32 text-gray-800 block font-bold text-xs uppercase tracking-wide">Due
-                            date</label>
-                        <span class="mr-4 inline-block">:</span>
-                        <div x-text="invoiceDueDate"></div>
-                    </div>
+                                            <p class="mt-2 text-sm font-normal text-slate-700">
+                                                Tanggal Acara
+                                            </p>
+                                            <p class="text-sm font-semibold text-slate-700"> {{$transaction->tgl_acara}}
+                                            </p>
+                                        </div>
+                                        <div class="text-sm font-light text-slate-500">
+                                            <p class="text-sm font-normal text-slate-700">STATUS</p>
+                                            <p class="text-sm font-semibold text-slate-700"> {{$transaction->status}}
+                                            </p>
+
+                                            <p class="mt-2 text-sm font-normal text-slate-700">Payment</p>
+                                            <p>{{$transaction->payment}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-12">
+                                <div class="flex flex-col mx-0 mt-0">
+                                    <table class="min-w-full divide-y divide-slate-500">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"
+                                                    class="py-3.5 pl-4 pr-3 text-left text-sm font-normal text-slate-700 sm:pl-6 md:pl-0">
+                                                    Description Produk
+                                                </th>
+                                                <th scope="col"
+                                                    class="py-3.5 pl-4 pr-3 text-left text-sm font-normal text-slate-700 sm:pl-6 md:pl-0">
+                                                    Vendor
+                                                </th>
+                                                <th scope="col"
+                                                    class="hidden py-3.5 px-3 text-right text-sm font-normal text-slate-700 sm:table-cell">
+                                                    Quantity
+                                                </th>
+                                                <th scope="col"
+                                                    class="hidden py-3.5 px-3 text-right text-sm font-normal text-slate-700 sm:table-cell">
+                                                    Harga
+                                                </th>
+                                                <th scope="col"
+                                                    class="py-3.5 pl-3 pr-4 text-right text-sm font-normal text-slate-700 sm:pr-6 md:pr-0">
+                                                    Total
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        @foreach ($transactions as $item)
+                                        <tbody>
+                                            <tr class="border-b border-slate-200">
+                                                <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
+                                                    <div class="font-medium text-slate-700">{{$item->product->name}}
+                                                    </div>
+
+                                                </td>
+                                                <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
+                                                    <div class="font-medium text-slate-700">{{$item->vendor->name}}
+                                                    </div>
+
+                                                </td>
+
+                                                <td
+                                                    class="hidden px-3 py-4 text-sm text-right text-slate-500 sm:table-cell">
+                                                    {{$item->quantity}}
+                                                </td>
+                                                <td
+                                                    class="hidden px-3 py-4 text-sm text-right font-bold text-slate-500 sm:table-cell">
+                                                    Rp.{{number_format($item->product->price)}}
+                                                </td>
+                                                <td
+                                                    class="py-4 pl-3 pr-4 text-sm text-right font-bold text-slate-500 sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($item->product->price * $item->quantity)}}
+                                                </td>
+
+                                            </tr>
+                                            <!-- Here you can write more products/tasks that you want to charge for-->
+                                        </tbody>
+                                        @endforeach
+                                        <tfoot class="">
+                                            <tr>
+                                                <th scope="row" colspan="4"
+                                                    class="hidden pt-6 pl-6 pr-3 text-sm font-light text-right text-slate-500 sm:table-cell md:pl-0">
+                                                    Subtotal
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-6 pl-4 pr-3 text-sm font-light text-left text-slate-500 sm:hidden">
+                                                    Subtotal
+                                                </th>
+                                                <td
+                                                    class="pt-6 pl-3 pr-4 text-sm font-bold text-right text-slate-500 sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($transaction->total_price)}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="4"
+                                                    class="hidden pt-6 pl-6 pr-3 text-sm font-light text-right text-slate-500 sm:table-cell md:pl-0">
+                                                    Deposito
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-6 pl-4 pr-3 text-sm font-light text-left text-slate-500 sm:hidden">
+                                                    Deposito
+                                                </th>
+                                                <td
+                                                    class="pt-6 pl-3 pr-4 text-sm font-bold text-right text-slate-500 sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($transaction->deposito)}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="4"
+                                                    class="hidden pt-4 pl-6 pr-3 text-sm font-light text-right text-slate-500 sm:table-cell md:pl-0">
+                                                    Biaya Layanan
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-4 pl-4 pr-3 text-sm font-light text-left text-slate-500 sm:hidden">
+                                                    Biaya Layanan
+                                                </th>
+                                                <td
+                                                    class="pt-4 pl-3 pr-4 text-sm font-bold text-right text-slate-500 sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($transaction->shipping_price)}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="4"
+                                                    class="hidden pt-4 pl-6 pr-3 text-sm font-normal text-right text-slate-700 sm:table-cell md:pl-0">
+                                                    Sisa Pembayaran
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-4 pl-4 pr-3 text-sm font-normal text-left text-slate-700 sm:hidden">
+                                                    Sisa Pembayaran
+                                                </th>
+                                                <td class="pt-4 pl-3 pr-4 text-sm  font-bold text-right text-slate-700
+                                        sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($transaction->total_price - $transaction->deposito)}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="1"
+                                                    class="hidden pt-4 pl-6 pr-3 text-sm font-normal text-center text-slate-700 sm:table-cell md:pl-0">
+                                                    M.Reyhan Dwi Amberta
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-4 pl-4 pr-3 text-sm font-normal text-center text-slate-700 sm:hidden">
+                                                    M.Reyhan Dwi Amberta
+                                                </th>
+
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="1"
+                                                    class="hidden pt-4 pl-6 pr-3 text-sm font-normal text-center text-slate-700 sm:table-cell md:pl-0">
+                                                    Founder WESP
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-4 pl-4 pr-3 text-sm font-normal text-center text-slate-700 sm:hidden">
+                                                    Founder WESP
+                                                </th>
+
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                    </article>
                 </div>
-                <div class="pr-5">
-                    <div class="w-32 h-32 mb-1 overflow-hidden">
-                        <img id="image2" class="object-cover w-20 h-20" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex justify-between mb-10">
-                <div class="w-1/2">
-                    <label class="text-gray-800 block mb-2 font-bold text-xs uppercase tracking-wide">Bill/Ship
-                        To:</label>
-                    <div>
-                        <div x-text="billing.name"></div>
-                        <div x-text="billing.address"></div>
-                        <div x-text="billing.extra"></div>
-                    </div>
-                </div>
-                <div class="w-1/2">
-                    <label class="text-gray-800 block mb-2 font-bold text-xs uppercase tracking-wide">From:</label>
-                    <div>
-                        <div x-text="from.name"></div>
-                        <div x-text="from.address"></div>
-                        <div x-text="from.extra"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-wrap -mx-1 border-b py-2 items-start">
-                <div class="flex-1 px-1">
-                    <p class="text-gray-600 uppercase tracking-wide text-xs font-bold">Description</p>
-                </div>
-
-                <div class="px-1 w-32 text-right">
-                    <p class="text-gray-600 uppercase tracking-wide text-xs font-bold">Units</p>
-                </div>
-
-                <div class="px-1 w-32 text-right">
-                    <p class="leading-none">
-                        <span class="block uppercase tracking-wide text-xs font-bold text-gray-600">Unit
-                            Price</span>
-                        <span class="font-medium text-xs text-gray-500">(Incl. GST)</span>
-                    </p>
-                </div>
-
-                <div class="px-1 w-32 text-right">
-                    <p class="leading-none">
-                        <span class="block uppercase tracking-wide text-xs font-bold text-gray-600">Amount</span>
-                        <span class="font-medium text-xs text-gray-500">(Incl. GST)</span>
-                    </p>
-                </div>
-            </div>
-            <template x-for="invoice in items" :key="invoice.id">
-                <div class="flex flex-wrap -mx-1 py-2 border-b">
-                    <div class="flex-1 px-1">
-                        <p class="text-gray-800" x-text="invoice.name"></p>
-                    </div>
-
-                    <div class="px-1 w-32 text-right">
-                        <p class="text-gray-800" x-text="invoice.qty"></p>
-                    </div>
-
-                    <div class="px-1 w-32 text-right">
-                        <p class="text-gray-800" x-text="numberFormat(invoice.rate)"></p>
-                    </div>
-
-                    <div class="px-1 w-32 text-right">
-                        <p class="text-gray-800" x-text="numberFormat(invoice.total)"></p>
-                    </div>
-                </div>
-            </template>
-
-            <div class="py-2 ml-auto mt-20" style="width: 320px">
-                <div class="flex justify-between mb-3">
-                    <div class="text-gray-800 text-right flex-1">Total incl. GST</div>
-                    <div class="text-right w-40">
-                        <div class="text-gray-800 font-medium" x-html="netTotal"></div>
-                    </div>
-                </div>
-                <div class="flex justify-between mb-4">
-                    <div class="text-sm text-gray-600 text-right flex-1">GST(18%) incl. in Total</div>
-                    <div class="text-right w-40">
-                        <div class="text-sm text-gray-600" x-html="totalGST"></div>
-                    </div>
-                </div>
-
-                <div class="py-2 border-t border-b">
-                    <div class="flex justify-between">
-                        <div class="text-xl text-gray-600 text-right flex-1">Amount due</div>
-                        <div class="text-right w-40">
-                            <div class="text-xl text-gray-800 font-bold" x-html="netTotal"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
         <!-- /Print Template -->
 

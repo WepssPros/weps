@@ -76,6 +76,7 @@ class VendorTransactionController extends Controller
      */
      public function show(Transaction $transaction)
     {
+        $transactions = TransactionItem::with(['product','vendor'])->where('transactions_id', $transaction->id)->get();
         if(request()->ajax())
         {
             $query = TransactionItem::with(['product','vendor'])->where('transactions_id', $transaction->id);
@@ -87,7 +88,7 @@ class VendorTransactionController extends Controller
             ->rawColumns(['action'])
             ->make();
         }
-        return view('pages.vendors.dashboard.transaction.show', compact('transaction'));
+        return view('pages.vendors.dashboard.transaction.show', compact('transaction','transactions'));
     }
 
     /**

@@ -378,8 +378,6 @@
         </div>
 
 
-
-
         <div class="flex -mx-1 border-b py-2 items-start">
             <div class="flex-1 px-1">
                 <p class="text-gray-800 uppercase tracking-wide text-sm font-bold">Deskripsi Pembayaran</p>
@@ -403,9 +401,6 @@
             <div class="px-1 w-20 text-center">
             </div>
         </div>
-
-
-
 
         <div class="py-2 ml-auto mt-5 w-full sm:w-2/4 lg:w-1/4">
             <div class="flex justify-between mb-3">
@@ -438,181 +433,226 @@
 
         <!-- Print Template -->
         <div id=" js-print-template" x-ref="printTemplate" class="hidden">
-            <div class="flex flex-wrap justify-between mb-8">
-                <div class="w-full md:w-1/3 mb-2 md:mb-0">
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Pesanan Untuk
-                        Acara:</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1 border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        {{$transaction->user->name}}
-                    </div>
+            <section class="py-1 bg-black">
+                <div class="max-w-5xl mx-auto py-5 bg-white">
+                    <article class="overflow-hidden">
+                        <div class="bg-[white] rounded-b-md">
+                            <div class="p-9">
+                                <div class="space-y-6 text-slate-700">
+                                    <svg width="50 " height="50" viewBox="0 0 131 151" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M129.08 113.525C128.268 114.704 127.442 115.069 127.442 115.069C127.442 115.069 77.2226 144.816 69.6397 149.242C69.1497 149.533 68.8873 149.689 68.8873 149.689C68.8873 149.689 67.7706 150.424 65.916 150.391C64.0612 150.447 62.9352 149.726 62.9352 149.726C62.9352 149.726 62.6688 149.572 62.1713 149.284C54.5146 144.939 3.96287 115.821 3.96287 115.821C3.96287 115.821 3.13235 115.466 2.30676 114.298C0.729672 112.843 0.677402 110.946 0.677402 110.946C0.677402 110.946 0.656168 106.88 0.623008 100.704C0.524741 86.075 0.353652 55.5653 0.300121 45.9411C0.291028 44.7344 0.282632 43.7045 0.275132 42.8844C0.261531 42.7333 0.238935 42.3807 0.265414 41.8957C0.259458 41.3413 0.254268 40.9654 0.249925 40.7911C0.17311 37.6856 3.99178 35.3291 3.99178 35.3291L61.4912 1.25988C62.7164 0.596637 63.9331 0.387224 65.0005 0.397001C66.0682 0.373924 67.288 0.568338 68.5219 1.21701L126.432 34.583C126.432 34.583 130.279 36.8928 130.24 39.9989C130.238 40.1733 130.238 40.5492 130.238 41.1036C130.271 41.5884 130.252 41.9415 130.241 42.0926C130.243 42.9118 130.247 43.9399 130.253 45.1446C130.317 54.7633 130.517 85.2798 130.597 99.9119C130.64 106.088 130.668 110.154 130.668 110.154C130.668 110.154 130.639 112.051 129.08 113.525ZM107.182 40.2807C95.325 33.4783 67.3916 17.3443 67.3916 17.3443C67.3916 17.3443 66.4462 16.8352 65.1008 16.7236C63.757 16.8516 62.818 17.3722 62.818 17.3722C62.818 17.3722 35.0832 33.8454 23.3101 40.7917L62.6204 64.5349C62.6204 64.5349 64.5126 65.7827 65.4168 68.5653C66.287 65.7719 68.1639 64.5011 68.1639 64.5011L107.182 40.2807ZM65.9597 83.5267L115.879 52.5276C115.898 55.2915 115.926 59.6539 115.958 64.6478L116.098 86.76C116.139 93.6112 116.169 99.0651 116.169 100.47C116.17 105.342 113.665 106.444 113.665 106.444C113.665 106.444 70.4842 131.941 67.6766 133.539C66.9976 133.838 66.3727 133.992 65.816 134.056C65.2585 133.999 64.6317 133.852 63.949 133.562C61.1221 131.998 17.6336 107.029 17.6336 107.029C17.6336 107.029 15.1154 105.957 15.0568 101.086C15.0401 99.6813 15.0038 94.2274 14.9616 87.3762L14.8314 65.264C14.8025 60.2701 14.7779 55.9076 14.7626 53.1437L65.0562 83.5322L65.0596 84.0857L65.5097 83.8062L65.9631 84.0802L65.9597 83.5267Z"
+                                            fill="#14CCD8" />
+                                    </svg>
 
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Alamat
-                        User:</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1  border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        {{$transaction->user->address}}
-                    </div>
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Username</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1  border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        {{$transaction->user->username}}
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3">
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Dari:</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1 border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        Zhafirah Catering
-                    </div>
-
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Alamat</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1 border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        Perumahan Teguh Permai Block D no 11
-                    </div>
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Contact</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1  border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        +62 822 4666 8262
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-wrap justify-between mb-8">
-                <div class="w-full md:w-1/3 mb-2 md:mb-0">
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Nama Acara
-                        :</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1 border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        {{$transaction->name_acara}}
-                    </div>
-
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Alamat
-                        Acara:</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1  border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        {{$transaction->address}}
-                    </div>
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">No
-                        Telephone</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1  border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        {{$transaction->user->phone}}
-                    </div>
-                </div>
-                <div class="w-full md:w-1/3">
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Payment:</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1 border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        {{$transaction->payment}}
-                    </div>
-
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Status</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1 border-b border-grey cursor-pointer hover:bg-gray-200-lighter font-bold">
-                        {{$transaction->status}}
-                    </div>
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Deposit</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1  border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        Rp. {{number_format($transaction->deposito)}}
-                    </div>
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Biaya
-                        Pelayanan</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1  border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        Rp. {{number_format($transaction->shipping_price)}}
-                    </div>
-                    <label class="text-gray-800 block mb-1 font-bold text-sm uppercase tracking-wide">Update
-                        Pemesanan</label>
-                    <div
-                        class="bg-gray-200 p-2 rounded mt-1  mb-1  border-b border-grey cursor-pointer hover:bg-gray-200-lighter">
-                        {{$transaction->updated_at}}
-                    </div>
-
-                </div>
-            </div>
-
-
-
-
-            <div class="flex -mx-1 border-b py-2 items-start">
-                <div class="flex-1 px-1">
-                    <p class="text-gray-800 uppercase tracking-wide text-sm font-bold">Deskripsi Pembayaran</p>
-                </div>
-
-                <div class="px-1 w-32 text-right">
-                    <p class="leading-none">
-                        <span class="block uppercase tracking-wide text-sm font-bold text-gray-800">Nama Pemesan</span>
-                        <span class="font-medium text-xs text-gray-500">{{$transaction->user->name}}</span>
-                    </p>
-                </div>
-
-
-                <div class="px-1 w-32 text-right">
-                    <p class="leading-none">
-                        <span class="block uppercase tracking-wide text-sm font-bold text-gray-800">Biaya layanan</span>
-                        <span
-                            class="font-medium text-xs text-gray-500">(Rp.{{number_format($transaction->shipping_price)}})</span>
-                    </p>
-                </div>
-                <div class="px-1 w-20 text-center">
-                </div>
-            </div>
-
-
-
-
-            <div class="py-2 ml-auto mt-5 w-full sm:w-2/4 lg:w-1/4">
-                <div class="flex justify-between mb-3">
-                    <div class="text-gray-800 text-right flex-1">Total Price</div>
-                    <div class="text-right w-40">
-                        <div class="text-gray-800 font-medium">Rp.{{number_format($transaction->total_price)}}
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-between mb-4">
-                    <div class="text-sm text-green-600 text-right flex-1 font-bold ">Deposit</div>
-                    <div class="text-right w-40">
-                        <div class="text-sm text-gray-600">Rp.{{number_format($transaction->deposito)}}</div>
-                    </div>
-                </div>
-
-                <div class="py-2 border-t border-b">
-                    <div class="flex justify-between">
-                        <div class="text-xl text-red-600 font-semibold text-right flex-1">Sisa Pembayaran</div>
-                        <div class="text-right w-40">
-                            <div class="text-xl text-gray-800 font-bold">
-                                Rp.{{number_format($transaction->deposito - $transaction->total_price - $transaction->shipping_price)}}
+                                    <p class="text-xl font-extrabold tracking-tight uppercase font-body">
+                                        Wedding Elektronik Salesman Program
+                                    </p>
+                                    <p class="text-xl font-extrabold tracking-tight uppercase font-body">
+                                        INVOICE
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="">
-                <div
-                    class="flex-col items-start justify-between pb-2 space-y-4 border-b lg:items-center lg:space-y-0 lg:flex-row">
+                            <div class="p-10">
+                                <div class="flex w-full">
+                                    <div class="grid grid-cols-4 gap-12">
+                                        <div class="text-sm font-light text-slate-500">
+                                            <p class="text-sm font-normal text-slate-700">
+                                                Invoice Detail:
+                                            </p>
+                                            <p>Pesanan Untuk Acara</p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->user->name}}</p>
+                                            <p>Alamat User</p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->user->address}}</p>
+                                            <p>Username </p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->user->username}}</p>
+                                        </div>
+                                        <div class="text-sm font-light text-slate-500">
+                                            <p class="text-sm font-normal text-slate-700">Billed To Acara</p>
+                                            <p>Nama Acara</p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->name_acara}} </p>
+                                            <p>Alamat Acara</p>
+                                            <p class="text-sm font-semibold text-slate-700"> {{$transaction->address}}
+                                            </p>
+                                            <p>No Telephon</p>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->user->phone}}</p>
+                                        </div>
+                                        <div class="text-sm font-light text-slate-500">
+                                            <p class="text-sm font-normal text-slate-700">Tanggal Pemesanan</p>
 
-                    <h2 class="pt-2 font-semibold text-lg text-gray-800 leading-tight mb-5">Item dan Vendor</h2>
-                    <div class="shadow overflow-hidden sm:rounded-md">
-                        <div class="px-4 py-5 bg-white sm:p-6">
-                            <table id="crudTable2">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Produk</th>
-                                        <th>Harga</th>
-                                        <th>Vendor</th>
-                                        <th>Qty</th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                        </div>
-                    </div>
+                                            <p class="text-sm font-semibold text-slate-700">
+                                                {{$transaction->created_at}}</p>
+
+                                            <p class="mt-2 text-sm font-normal text-slate-700">
+                                                Tanggal Acara
+                                            </p>
+                                            <p class="text-sm font-semibold text-slate-700"> {{$transaction->tgl_acara}}
+                                            </p>
+                                        </div>
+                                        <div class="text-sm font-light text-slate-500">
+                                            <p class="text-sm font-normal text-slate-700">STATUS</p>
+                                            <p class="text-sm font-semibold text-slate-700"> {{$transaction->status}}
+                                            </p>
+
+                                            <p class="mt-2 text-sm font-normal text-slate-700">Payment</p>
+                                            <p>{{$transaction->payment}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-12">
+                                <div class="flex flex-col mx-0 mt-0">
+                                    <table class="min-w-full divide-y divide-slate-500">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"
+                                                    class="py-3.5 pl-4 pr-3 text-left text-sm font-normal text-slate-700 sm:pl-6 md:pl-0">
+                                                    Description Produk
+                                                </th>
+                                                <th scope="col"
+                                                    class="py-3.5 pl-4 pr-3 text-left text-sm font-normal text-slate-700 sm:pl-6 md:pl-0">
+                                                    Vendor
+                                                </th>
+                                                <th scope="col"
+                                                    class="hidden py-3.5 px-3 text-right text-sm font-normal text-slate-700 sm:table-cell">
+                                                    Quantity
+                                                </th>
+                                                <th scope="col"
+                                                    class="hidden py-3.5 px-3 text-right text-sm font-normal text-slate-700 sm:table-cell">
+                                                    Harga
+                                                </th>
+                                                <th scope="col"
+                                                    class="py-3.5 pl-3 pr-4 text-right text-sm font-normal text-slate-700 sm:pr-6 md:pr-0">
+                                                    Total
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        @foreach ($transactions as $item)
+                                        <tbody>
+                                            <tr class="border-b border-slate-200">
+                                                <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
+                                                    <div class="font-medium text-slate-700">{{$item->product->name}}
+                                                    </div>
+
+                                                </td>
+                                                <td class="py-4 pl-4 pr-3 text-sm sm:pl-6 md:pl-0">
+                                                    <div class="font-medium text-slate-700">{{$item->vendor->name}}
+                                                    </div>
+
+                                                </td>
+
+                                                <td
+                                                    class="hidden px-3 py-4 text-sm text-right text-slate-500 sm:table-cell">
+                                                    {{$item->quantity}}
+                                                </td>
+                                                <td
+                                                    class="hidden px-3 py-4 text-sm text-right font-bold text-slate-500 sm:table-cell">
+                                                    Rp.{{number_format($item->product->price)}}
+                                                </td>
+                                                <td
+                                                    class="py-4 pl-3 pr-4 text-sm text-right font-bold text-slate-500 sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($item->product->price * $item->quantity)}}
+                                                </td>
+
+                                            </tr>
+                                            <!-- Here you can write more products/tasks that you want to charge for-->
+                                        </tbody>
+                                        @endforeach
+                                        <tfoot class="">
+                                            <tr>
+                                                <th scope="row" colspan="4"
+                                                    class="hidden pt-6 pl-6 pr-3 text-sm font-light text-right text-slate-500 sm:table-cell md:pl-0">
+                                                    Subtotal
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-6 pl-4 pr-3 text-sm font-light text-left text-slate-500 sm:hidden">
+                                                    Subtotal
+                                                </th>
+                                                <td
+                                                    class="pt-6 pl-3 pr-4 text-sm font-bold text-right text-slate-500 sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($transaction->total_price)}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="4"
+                                                    class="hidden pt-6 pl-6 pr-3 text-sm font-light text-right text-slate-500 sm:table-cell md:pl-0">
+                                                    Deposito
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-6 pl-4 pr-3 text-sm font-light text-left text-slate-500 sm:hidden">
+                                                    Deposito
+                                                </th>
+                                                <td
+                                                    class="pt-6 pl-3 pr-4 text-sm font-bold text-right text-slate-500 sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($transaction->deposito)}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="4"
+                                                    class="hidden pt-4 pl-6 pr-3 text-sm font-light text-right text-slate-500 sm:table-cell md:pl-0">
+                                                    Biaya Layanan
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-4 pl-4 pr-3 text-sm font-light text-left text-slate-500 sm:hidden">
+                                                    Biaya Layanan
+                                                </th>
+                                                <td
+                                                    class="pt-4 pl-3 pr-4 text-sm font-bold text-right text-slate-500 sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($transaction->shipping_price)}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="4"
+                                                    class="hidden pt-4 pl-6 pr-3 text-sm font-normal text-right text-slate-700 sm:table-cell md:pl-0">
+                                                    Sisa Pembayaran
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-4 pl-4 pr-3 text-sm font-normal text-left text-slate-700 sm:hidden">
+                                                    Sisa Pembayaran
+                                                </th>
+                                                <td class="pt-4 pl-3 pr-4 text-sm  font-bold text-right text-slate-700
+                                        sm:pr-6 md:pr-0">
+                                                    Rp.{{number_format($transaction->total_price - $transaction->deposito)}}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="1"
+                                                    class="hidden pt-4 pl-6 pr-3 text-sm font-normal text-center text-slate-700 sm:table-cell md:pl-0">
+                                                    M.Reyhan Dwi Amberta
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-4 pl-4 pr-3 text-sm font-normal text-center text-slate-700 sm:hidden">
+                                                    M.Reyhan Dwi Amberta
+                                                </th>
+
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" colspan="1"
+                                                    class="hidden pt-4 pl-6 pr-3 text-sm font-normal text-center text-slate-700 sm:table-cell md:pl-0">
+                                                    Founder WESP
+                                                </th>
+                                                <th scope="row"
+                                                    class="pt-4 pl-4 pr-3 text-sm font-normal text-center text-slate-700 sm:hidden">
+                                                    Founder WESP
+                                                </th>
+
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                    </article>
                 </div>
-            </div>
+            </section>
         </div>
 
         <!-- /Print Template -->
@@ -811,8 +851,6 @@
         }
 
     </script>
-
-
 
 
 
