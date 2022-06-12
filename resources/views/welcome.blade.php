@@ -109,7 +109,6 @@
             .hide-scroll::-webkit-scrollbar {
                 display: none;
             }
-
         </style>
 
         <style>
@@ -150,7 +149,6 @@
                 width: 200px;
                 height: 175px;
             }
-
         </style>
 
         <style>
@@ -176,7 +174,6 @@
             .footer-2-2 .social-media-p:hover path {
                 fill: #555252;
             }
-
         </style>
     </head>
 
@@ -293,7 +290,7 @@
                                 <div class="">
                                     <h1
                                         class="mb-1 text-5xl font-bold leading-snug text-blackText-2 md:text-6xl lg:text-6xl md:leading-normal lg:leading-normal">
-                                        Weeding Elektronik Salesman Program</h1>
+                                        Weding Elektronik Salesman Program</h1>
                                     <div class="flex flex-row my-12 divide-x-2 divide-gray-300 max-w-statisticHero">
                                         <div class="pr-5 md:pr-9">
                                             <div class="mb-1 text-3xl font-extrabold text-blackText-2 lg:text-5xl">5000+
@@ -353,88 +350,37 @@
                                         @endauth
                                     </div>
                                 </div>
-                            </div> <!-- RIGHT PART -->
+                            </div>
+                            <!-- RIGHT PART -->
                             <div class="w-full col-span-2 mt-16 md:col-span-1 lg:mt-0">
                                 <!-- START CARD CAROUSEL -->
                                 <div
                                     class="flex flex-row overflow-hidden overflow-x-scroll appearance-none   hide-scroll">
                                     <!-- CARD 1 -->
+                                    @foreach ($productsmc as $product)
                                     <div class="max-w-xs mr-8 bg-white card md:mr-16 shadow-cardShadow rounded-28 p-7">
                                         <div class="relative h-cardHotel">
                                             <div class="top-row">
-                                                <div class="image-placeholder w-imageCard h-imageCard"> <img
-                                                        src="{{asset('image/gambar3.png')}}" alt="card-image"
-                                                        class="object-cover w-full rounded-2xl" />
+                                                <div class="image-placeholder w-imageCard h-imageCard">
+                                                    <img // CARA AMBIL STORAGE GINI
+                                                        src=" {{ $product->galleries()->exists() ? url($product->galleries->first()->url) : 'data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='}}"
+                                                        alt="card-image" class="object-cover w-full rounded-2xl" />
                                                 </div>
-                                                <div class="mt-6 text-2xl font-bold text-blackText-1">Zhafirah Catering
-                                                    & Weding Organizer
+                                                <div class="mt-12 text-2xl font-bold text-blackText-1">
+                                                    {{$product->vendor->name}}
                                                 </div>
-                                                <p class="text-base font-normal leading-7 text-gray-6">150m</p>
+                                                <div class="mt-2 text-1xl font-bold text-blackText-1">
+                                                    {{$product->name}}
+                                                </div>
+                                                <p class="text-base font-normal leading-7 text-gray-6">
+                                                    {{$product->category->name}}</p>
                                             </div>
                                             <div class="absolute bottom-0 w-full bottom-row">
                                                 <div class="flex flex-row items-center justify-between">
                                                     <div class="mr-auto">
                                                         <p class="text-blackText-1">Start from <span
-                                                                class="font-bold">Rp.5.000.000 </span> </p>
-                                                    </div>
-                                                    <div class="flex flex-row items-center"> <svg width="18" height="17"
-                                                            viewBox="0 0 18 17" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M7.98986 1.58575C8.40236 0.749085 9.59486 0.749085 10.0074 1.58575L11.9724 5.56659L16.3665 6.20492C17.289 6.33909 17.6574 7.47325 16.9899 8.12409L13.8099 11.2241L14.5607 15.5991C14.719 16.5183 13.754 17.2191 12.9282 16.7858L8.9982 14.7191L5.06903 16.7858C4.24403 17.2191 3.27903 16.5191 3.4357 15.5991L4.18653 11.2241L1.00736 8.12409C0.339863 7.47409 0.708197 6.33909 1.6307 6.20492L6.02486 5.56659L7.98986 1.58575Z"
-                                                                fill="#FF9900" /> </svg> <span
-                                                            class="ml-1 text-yellow">5</span> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CARD 2 -->
-                                    <div class="max-w-xs mr-8 bg-white card md:mr-16 shadow-cardShadow rounded-28 p-7">
-                                        <div class="relative h-cardHotel">
-                                            <div class="top-row">
-                                                <div class="image-placeholder w-imageCard h-imageCard"> <img
-                                                        src="{{asset('image/gambar1.jpg')}}" alt="card-image"
-                                                        class="object-cover w-full rounded-2xl" />
-                                                </div>
-                                                <div class="mt-6 text-2xl font-bold text-blackText-1">Pesona Event
-                                                    Organizer & Weding Organizer
-                                                </div>
-                                                <p class="text-base font-normal leading-7 text-gray-6">150m</p>
-                                            </div>
-                                            <div class="absolute bottom-0 w-full bottom-row">
-                                                <div class="flex flex-row items-center justify-between">
-                                                    <div class="mr-auto">
-                                                        <p class="text-blackText-1">Start from <span
-                                                                class="font-bold">Rp.5.000.000 </span> </p>
-                                                    </div>
-                                                    <div class="flex flex-row items-center"> <svg width="18" height="17"
-                                                            viewBox="0 0 18 17" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M7.98986 1.58575C8.40236 0.749085 9.59486 0.749085 10.0074 1.58575L11.9724 5.56659L16.3665 6.20492C17.289 6.33909 17.6574 7.47325 16.9899 8.12409L13.8099 11.2241L14.5607 15.5991C14.719 16.5183 13.754 17.2191 12.9282 16.7858L8.9982 14.7191L5.06903 16.7858C4.24403 17.2191 3.27903 16.5191 3.4357 15.5991L4.18653 11.2241L1.00736 8.12409C0.339863 7.47409 0.708197 6.33909 1.6307 6.20492L6.02486 5.56659L7.98986 1.58575Z"
-                                                                fill="#FF9900" /> </svg> <span
-                                                            class="ml-1 text-yellow">5</span> </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- CARD 3 -->
-                                    <div class="max-w-xs mr-8 bg-white card md:mr-16 shadow-cardShadow rounded-28 p-7">
-                                        <div class="relative h-cardHotel">
-                                            <div class="top-row">
-                                                <div class="image-placeholder w-imageCard h-imageCard"> <img
-                                                        src="{{asset('image/gambar2.jpg')}}" alt="card-image"
-                                                        class="object-cover w-full rounded-2xl" />
-                                                </div>
-                                                <div class="mt-6 text-2xl font-bold text-blackText-1">P.Project Weeding
-                                                    Organizer & Event Organizer </div>
-                                                <p class="text-base font-normal leading-7 text-gray-6">120m</p>
-                                            </div>
-                                            <div class="absolute bottom-0 w-full bottom-row">
-                                                <div class="flex flex-row items-center justify-between">
-                                                    <div class="mr-auto">
-                                                        <p class="text-blackText-1">Start from <span
-                                                                class="font-bold">Rp.5.000.000 </span> </p>
+                                                                class="font-bold">Rp{{number_format($product->price)}}
+                                                            </span> </p>
                                                     </div>
                                                     <div class="flex flex-row items-center"> <svg width="18" height="17"
                                                             viewBox="0 0 18 17" fill="none"
@@ -448,8 +394,196 @@
                                         </div>
                                     </div>
 
+                                    @endforeach
+
+                                    <!-- CARD 3 -->
+
+
                                 </div> <!-- END CARD CAROUSEL -->
                             </div>
+                            {{-- RIGHT CARD CAROUSEL  --}} <!-- RIGHT PART 2 -->
+                            <!-- LEFT PART2 -->
+                            <div class="col-span-2 md:col-span-1">
+                                <div
+                                    class="flex flex-row overflow-hidden overflow-x-scroll appearance-none   hide-scroll">
+                                    <!-- CARD 1 -->
+
+                                    @foreach ($productswo as $product)
+                                    <div class="max-w-xs mr-8 bg-white card md:mr-16 shadow-cardShadow rounded-28 p-7">
+                                        <div class="relative h-cardHotel">
+                                            <div class="top-row">
+                                                <div class="image-placeholder w-imageCard h-imageCard">
+                                                    <img // CARA AMBIL STORAGE GINI
+                                                        src=" {{ $product->galleries()->exists() ? url($product->galleries->first()->url) : 'data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='}}"
+                                                        alt="card-image" class="object-cover w-full rounded-2xl" />
+                                                </div>
+                                                <div class="mt-12 text-1xl font-bold text-blackText-1">
+                                                    {{$product->vendor->name}}
+                                                </div>
+                                                <div class="mt-2 text-1xl font-bold text-blackText-1">
+                                                    {{$product->name}}
+                                                </div>
+                                                <p class="text-base font-normal leading-7 text-gray-6">
+                                                    {{$product->category->name}}</p>
+                                            </div>
+                                            <div class="absolute bottom-0 w-full bottom-row">
+                                                <div class="flex flex-row items-center justify-between">
+                                                    <div class="mr-auto">
+                                                        <p class="text-blackText-1">Start from <span
+                                                                class="font-bold">Rp{{number_format($product->price)}}
+                                                            </span> </p>
+                                                    </div>
+                                                    <div class="flex flex-row items-center"> <svg width="18" height="17"
+                                                            viewBox="0 0 18 17" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M7.98986 1.58575C8.40236 0.749085 9.59486 0.749085 10.0074 1.58575L11.9724 5.56659L16.3665 6.20492C17.289 6.33909 17.6574 7.47325 16.9899 8.12409L13.8099 11.2241L14.5607 15.5991C14.719 16.5183 13.754 17.2191 12.9282 16.7858L8.9982 14.7191L5.06903 16.7858C4.24403 17.2191 3.27903 16.5191 3.4357 15.5991L4.18653 11.2241L1.00736 8.12409C0.339863 7.47409 0.708197 6.33909 1.6307 6.20492L6.02486 5.56659L7.98986 1.58575Z"
+                                                                fill="#FF9900" /> </svg> <span
+                                                            class="ml-1 text-yellow">5</span> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @endforeach
+
+                                    <!-- CARD 3 -->
+
+
+                                </div>
+                            </div>
+                            <!-- LEFT PART2 -->
+
+                            <!-- RIGHT PART 2 -->
+                            <div class="col-span-2 md:col-span-1">
+                                <div class="">
+                                    <h1
+                                        class="mb-1 text-5xl font-bold leading-snug text-blackText-2 md:text-6xl lg:text-6xl md:leading-normal lg:leading-normal">
+                                        Bekerja Sama Dengan Weding Organizer Profesional</h1>
+                                    <div class="flex flex-row my-12 divide-x-2 divide-gray-300 max-w-statisticHero">
+                                        <div class="pr-5 md:pr-9">
+                                            <div class="mb-1 text-3xl font-extrabold text-blackText-2 lg:text-5xl">
+                                                5000+
+                                            </div>
+                                            <p class="text-base font-normal leading-7 text-gray-6">Event</p>
+                                        </div>
+                                        <div class="px-5 md:px-9">
+                                            <div class="mb-1 text-3xl font-extrabold text-blackText-2 lg:text-5xl">80
+                                            </div>
+                                            <p class="text-base font-normal leading-7 text-gray-6">Vendor
+                                            </p>
+                                        </div>
+                                        <div class="px-5 md:px-9">
+                                            <div class="mb-1 text-3xl font-extrabold text-blackText-2 lg:text-5xl">760+
+                                            </div>
+                                            <p class="text-base font-normal leading-7 text-gray-6">Pesanan</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="mt-1 text-right font-normal leading-7 text-gray-6"> Kami memberikan
+                                            pelayanan yang terbaik untuk semua konsumen / pelanggan
+                                            yang telah memalakukan pemesanan dan mempercayakan Team W.E.P.S dalam
+                                            mengabadikan moment sekali dalam seumur hidup anda,
+                                            Dan kami berkomitmen untuk memajukan para pelaku usaha khususnya Jasa
+                                            Freelance untuk bermitra bersama dalam membangun relasi antara vendor to
+                                            vendor.
+                                            <br>
+                                            Growing toghether with Vendor !!!
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <!-- LEFT PART3 -->
+                            <div class="col-span-2 md:col-span-1">
+                                <div class="">
+                                    <h1
+                                        class="mb-1 text-5xl font-bold leading-snug text-blackText-2 md:text-6xl lg:text-6xl md:leading-normal lg:leading-normal">
+                                        Kami Juga Bekerja Sama Dengan Weding Decoration Profesional</h1>
+                                    <div class="flex flex-row my-12 divide-x-2 divide-gray-300 max-w-statisticHero">
+                                        <div class="pr-5 md:pr-9">
+                                            <div class="mb-1 text-3xl font-extrabold text-blackText-2 lg:text-5xl">
+                                                5000+
+                                            </div>
+                                            <p class="text-base font-normal leading-7 text-gray-6">Event</p>
+                                        </div>
+                                        <div class="px-5 md:px-9">
+                                            <div class="mb-1 text-3xl font-extrabold text-blackText-2 lg:text-5xl">80
+                                            </div>
+                                            <p class="text-base font-normal leading-7 text-gray-6">Vendor
+                                            </p>
+                                        </div>
+                                        <div class="px-5 md:px-9">
+                                            <div class="mb-1 text-3xl font-extrabold text-blackText-2 lg:text-5xl">
+                                                760+
+                                            </div>
+                                            <p class="text-base font-normal leading-7 text-gray-6">Pesanan</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="mt-1 text-base font-normal leading-7 text-gray-6"> Kami memberikan
+                                            pelayanan yang terbaik untuk semua konsumen / pelanggan
+                                            yang telah memalakukan pemesanan dan mempercayakan Team W.E.P.S dalam
+                                            mengabadikan moment sekali dalam seumur hidup anda,
+                                            Dan kami berkomitmen untuk memajukan para pelaku usaha khususnya Jasa
+                                            Freelance untuk bermitra bersama dalam membangun relasi antara vendor to
+                                            vendor.
+                                            <br>
+                                            Growing toghether with Vendor !!!
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- START CARD CAROUSEL -->
+                            <div class="flex flex-row overflow-hidden overflow-x-scroll appearance-none   hide-scroll">
+                                <!-- CARD 1 -->
+                                @foreach ($productsdekorasi as $product)
+                                <div class="max-w-xs mr-8 bg-white card md:mr-16 shadow-cardShadow rounded-28 p-7">
+                                    <div class="relative h-cardHotel">
+                                        <div class="top-row">
+                                            <div class="image-placeholder w-imageCard h-imageCard">
+                                                <img // CARA AMBIL STORAGE GINI
+                                                    src=" {{ $product->galleries()->exists() ? url($product->galleries->first()->url) : 'data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='}}"
+                                                    alt="card-image" class="object-cover w-full rounded-2xl" />
+                                            </div>
+                                            <div class="mt-12 text-2xl font-bold text-blackText-1">
+                                                {{$product->vendor->name}}
+                                            </div>
+                                            <div class="mt-2 text-1xl font-bold text-blackText-1">
+                                                {{$product->name}}
+                                            </div>
+                                            <p class="text-base font-normal leading-7 text-gray-6">
+                                                {{$product->category->name}}</p>
+                                        </div>
+                                        <div class="absolute bottom-0 w-full bottom-row">
+                                            <div class="flex flex-row items-center justify-between">
+                                                <div class="mr-auto">
+                                                    <p class="text-blackText-1">Start from <span
+                                                            class="font-bold">Rp{{number_format($product->price)}}
+                                                        </span> </p>
+                                                </div>
+                                                <div class="flex flex-row items-center"> <svg width="18" height="17"
+                                                        viewBox="0 0 18 17" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.98986 1.58575C8.40236 0.749085 9.59486 0.749085 10.0074 1.58575L11.9724 5.56659L16.3665 6.20492C17.289 6.33909 17.6574 7.47325 16.9899 8.12409L13.8099 11.2241L14.5607 15.5991C14.719 16.5183 13.754 17.2191 12.9282 16.7858L8.9982 14.7191L5.06903 16.7858C4.24403 17.2191 3.27903 16.5191 3.4357 15.5991L4.18653 11.2241L1.00736 8.12409C0.339863 7.47409 0.708197 6.33909 1.6307 6.20492L6.02486 5.56659L7.98986 1.58575Z"
+                                                            fill="#FF9900" /> </svg> <span
+                                                        class="ml-1 text-yellow">5</span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @endforeach
+
+                                <!-- CARD 3 -->
+
+
+                            </div> <!-- END CARD CAROUSEL -->
+                            <!-- LEFT PART3 -->
+
                         </div>
                     </div>
                 </div>
@@ -738,7 +872,6 @@
                     })
                 })
             })
-
         </script>
     </body>
 

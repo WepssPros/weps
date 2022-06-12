@@ -107,7 +107,7 @@
                         alt="background" class="absolute max-w-screen-2xl z-forBackground testimonial-bg" /> </div>
                 <div class="pt-3 section-heading mb-16">
                     <div class="mb-3 text-4xl font-bold leading-normal text-blackText-2 lg:text-6xl lg:leading-normal">
-                        Here is what our clients <br class="hidden md:block" /> are saying about us </div>
+                        Inilah yang Founder kami <br class="hidden md:block" /> mengatakan tentang Wesp </div>
                 </div>
                 <div class="grid grid-cols-2 quote gap-14 lg:gap-44">
                     <div class="col-span-2 lg:col-span-1">
@@ -123,10 +123,12 @@
                                 src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header-House/star-yellow.svg"
                                 alt="star" class="w-6 mr-3" /> </div>
                         <div class="pr-8 mt-5 message">
-                            <p class="text-base font-normal leading-7 text-gray-6"> “Great way to make the first market
-                                value estmate and then to select an experienced active broker in the local area for a
-                                more in-depth study. Professional and personalised advice, while avoiding going through
-                                the big brokers who charge fees that are too much.” </p>
+                            <p class="text-base font-normal leading-7 text-gray-6"> “Cara yang bagus untuk membuat pasar
+                                pertama
+                                estimasi nilai jual beli yang tinggi dan kemudian pemilihan vendor yang aktif serta
+                                berpengalaman di area lokal untuk
+                                memeriahkan acara yang lebih mendalam. Saran profesional dan pribadi, sambil menghindari
+                                budget besar yang membebankan biaya yang terlalu banyak.”</p>
                         </div>
                         <div class="flex items-center pt-1 user mt-14">
                             <div class="mr-6"> <img
@@ -151,14 +153,14 @@
                                     <div class="image-placeholder w-imageCard h-imageCard"> <img
                                             src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header-House/card-hotel-image-(4).jpg"
                                             alt="card-image" class="object-cover w-full rounded-2xl" /> </div>
-                                    <div class="mt-6 text-2xl font-bold text-blackText-1"> Hotel Tentrem </div>
-                                    <p class="text-base font-normal leading-7 text-gray-6">150m</p>
+                                    <div class="mt-6 text-2xl font-bold text-blackText-1"> Wesp Core</div>
+                                    <p class="text-base font-normal leading-7 text-gray-6">Jambi City </p>
                                 </div>
                                 <div class="absolute bottom-0 w-full bottom-row">
                                     <div class="flex flex-row items-center justify-between">
                                         <div class="mr-auto">
                                             <p class="text-blackText-1 text-base font-normal leading-7">Start from <span
-                                                    class="font-bold">40 USD</span> </p>
+                                                    class="font-bold">2022 - Until Now</span> </p>
                                         </div>
                                         <div class="flex flex-row items-center"> <img
                                                 src="https://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header-House/star-yellow.svg"
@@ -200,19 +202,19 @@
                 }
 
             </style>
-            <main
-                class="          flex flex-col          gap-12          px-4          py-20          mx-auto          max-w-screen-2xl          lg:px-24        ">
+            <main class="flex flex-col gap-12 px-4 py-20 mx-auto max-w-screen-2xl lg:px-24">
                 <div class="flex flex-col items-center justify-center gap-5">
-                    <div class="text-lg font-bold text-center text-blue-700 uppercase"> Our Formula </div>
-                    <div
-                        class="              text-4xl              md:text-5xl              font-bold              text-center text-dark-1              leading-normal              lg:leading-snug            ">
-                        3-Steps to Work at <br class="hidden lg:block" /> Your Dream Companies </div>
+                    <div class="text-lg font-bold text-center text-blue-700 uppercase">
+                        Formula kami </div>
+                    <div class="text-4xl md:text-5xl font-bold text-center text-dark-1 leading-normal lg:leading-snug ">
+                        3-Langkah Bekerja di <br class="hidden lg:block" /> Vendor Impian Anda
+                    </div>
                 </div>
                 <div class="grid items-center justify-center h-full gap-5 md:grid-cols-12">
                     <!-- CARD 1 -->
                     <div class="h-full md:col-span-6 lg:col-span-4">
                         <div
-                            class="                flex flex-col                items-center                justify-center                pb-10                border border-gray-300                px-9                pt-14                rounded-3xl              ">
+                            class=" flex flex-col items-center justify-center pb-10 border border-gray-300 px-9 pt-14 rounded-3xl ">
                             <div> <svg width="106" height="106" viewBox="0 0 106 106" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="53" cy="53" r="52.5" stroke="#E5D4FF" />
@@ -225,9 +227,10 @@
                                         d="M53 51.5C56.3137 51.5 59 48.8137 59 45.5C59 42.1863 56.3137 39.5 53 39.5C49.6863 39.5 47 42.1863 47 45.5C47 48.8137 49.6863 51.5 53 51.5Z"
                                         stroke="#654B8C" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" /> </svg> </div>
-                            <div class="mt-10 mb-3 text-lg font-semibold text-dark-2"> Sign Up </div>
-                            <p class="text-base font-medium text-center text-gray-500"> Get yourself ready and join our
-                                great adventures </p>
+                            <div class="mt-10 mb-3 text-lg font-semibold text-dark-2"> Daftarkan Dirimu di Wesp </div>
+                            <p class="text-base font-medium text-center text-gray-500"> Persiapkan dirimu dan
+                                bergabunglah bersama kami Untuk menjadi
+                                vendor profesional </p>
                         </div>
                     </div> <!-- CARD 2 -->
                     <div class="h-full md:col-span-6 lg:col-span-4">
@@ -245,9 +248,10 @@
                                         d="M38 39.5H47C48.5913 39.5 50.1174 40.1321 51.2426 41.2574C52.3679 42.3826 53 43.9087 53 45.5V66.5C53 65.3065 52.5259 64.1619 51.682 63.318C50.8381 62.4741 49.6935 62 48.5 62H38V39.5Z"
                                         stroke="#9F854C" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" /> </svg> </div>
-                            <div class="mt-10 mb-3 text-lg font-semibold text-dark-2"> Finish The Quiz </div>
-                            <p class="text-base font-medium text-center text-gray-500"> Answer the question that we've
-                                prepared for your career </p>
+                            <div class="mt-10 mb-3 text-lg font-semibold text-dark-2"> Selesaikan Pesanan Kamu </div>
+                            <p class="text-base font-medium text-center text-gray-500"> Jawab pertanyaan yang kami
+                                miliki
+                                siap untuk karir Anda </p>
                         </div>
                     </div> <!-- CARD 3 -->
                     <div class="h-full md:col-span-6 lg:col-span-4">
@@ -265,9 +269,10 @@
                                         d="M59 66.5V42.5C59 41.7044 58.6839 40.9413 58.1213 40.3787C57.5587 39.8161 56.7956 39.5 56 39.5H50C49.2044 39.5 48.4413 39.8161 47.8787 40.3787C47.3161 40.9413 47 41.7044 47 42.5V66.5"
                                         stroke="#B67E6A" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" /> </svg> </div>
-                            <div class="mt-10 mb-3 text-lg font-semibold text-dark-2"> Interview </div>
-                            <p class="text-base font-medium text-center text-gray-500"> We will setup the meeting with
-                                your dream companies </p>
+                            <div class="mt-10 mb-3 text-lg font-semibold text-dark-2">
+                                Wawancara </div>
+                            <p class="text-base font-medium text-center text-gray-500"> Team Kami akan Membantu Anda
+                                Menjadikan Vendor anda yang terbaik</p>
                         </div>
                     </div>
                 </div>
@@ -371,10 +376,11 @@
             </style>
             <div class="max-w-screen-2xl px-4 lg:px-24 mx-auto content">
                 <div class="text-center section-heading mb-16">
-                    <div class="mb-3 text-4xl font-bold leading-relaxed text-blackText-2 lg:text-6xl"> Why choose us
+                    <div class="mb-3 text-4xl font-bold leading-relaxed text-blackText-2 lg:text-6xl"> Mengapa memilih
+                        kami?
                     </div>
-                    <div class="text-lg font-medium text-gray-7"> House is comitted to helping its clients to reach
-                        their goals </div>
+                    <div class="text-lg font-medium text-gray-7">Kami berkomitmen untuk membantu vendor mencapai
+                        tujuan mereka </div>
                 </div>
                 <div class="grid justify-center grid-cols-6 gap-10 text-left section-element lg:grid-cols-12 md:gap-2">
                     <!-- TAX ADVANTAGE -->
@@ -387,9 +393,10 @@
                             <div> <img class="non-color" width="76"
                                     src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/taxes.svg"
                                     alt="house" /> </div>
-                            <div class="mt-6 mb-1 text-base font-bold text-blue-primary"> Tax Advantage </div>
-                            <div class="text-base font-normal leading-7 text-gray-7"> Tax advantage which applies to
-                                certain accounts or investments. </div>
+                            <div class="mt-6 mb-1 text-base font-bold text-blue-primary"> Keuntungan Royalti </div>
+                            <div class="text-base font-normal leading-7 text-gray-7"> Keuntungan Royalti yang berlaku
+                                untuk
+                                akun atau investasi tertentu. </div>
                         </div>
                     </div> <!-- PROPERTY INSURANCE -->
                     <div class="col-span-6 mr-0 md:col-span-3 md:mr-1">
@@ -401,9 +408,10 @@
                             <div> <img class="non-color"
                                     src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/user.svg"
                                     alt="house" /> </div>
-                            <div class="mt-6 mb-1 text-base font-bold text-blue-primary"> Property Insurance </div>
-                            <div class="text-base font-normal leading-7 text-gray-7"> A series of policies that offer
-                                either property protection of liability coverage. </div>
+                            <div class="mt-6 mb-1 text-base font-bold text-blue-primary">Jaminan Uang Kembali </div>
+                            <div class="text-base font-normal leading-7 text-gray-7"> Serangkaian kebijakan yang
+                                menawarkan
+                                baik perlindungan pesanan serta transaksi dari pertanggungan kewajiban. </div>
                         </div>
                     </div> <!-- LOWEST COMMISSION -->
                     <div class="col-span-6 mr-0 md:col-span-3 md:mr-1">
@@ -415,9 +423,9 @@
                             <div> <img class="non-color"
                                     src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/discount.svg"
                                     alt="house" /> </div>
-                            <div class="mt-6 mb-1 text-base font-bold text-blue-primary"> Lowest Commission </div>
-                            <div class="text-base font-normal leading-7 text-gray-7"> No longer have to negotiate
-                                commissions and haggle with other agents. </div>
+                            <div class="mt-6 mb-1 text-base font-bold text-blue-primary"> Komisi Terendah</div>
+                            <div class="text-base font-normal leading-7 text-gray-7">Tidak lagi harus bernegosiasi
+                                komisi dan tawar-menawar dengan vendor lain. </div>
                         </div>
                     </div> <!-- HOUSE NOW-->
                     <div class="col-span-6 mr-0 md:col-span-3 md:mr-1">
@@ -429,9 +437,10 @@
                             <div> <img class="non-color" width="62"
                                     src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/calendar.svg"
                                     alt="house" /> </div>
-                            <div class="mt-6 mb-1 text-base font-bold text-blue-primary"> House Now </div>
-                            <div class="text-base font-normal leading-7 text-gray-7"> Easy booking system for a host.
-                                Try our innovative model. </div>
+                            <div class="mt-6 mb-1 text-base font-bold text-blue-primary">Wesp Sekarang </div>
+                            <div class="text-base font-normal leading-7 text-gray-7">Sistem pemesanan mudah untuk tuan
+                                rumah.
+                                Coba model inovatif kami. </div>
                         </div>
                     </div>
                 </div>

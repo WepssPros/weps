@@ -79,7 +79,7 @@ class CalonVendorsController extends Controller
     {
         if(request()->ajax())
         {
-            $query = Calonvendor::with(['user'])->where('users_id', $transaction->id);
+            $query = Calonvendor::with(['user'])->where('users_id', $calonvendor->id);
 
             return DataTables::of($query)
             ->editColumn('product.price', function($item){

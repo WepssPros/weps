@@ -306,14 +306,11 @@
                 <div class="grid w-full overflow-hidden  overflow-x-scroll hide-scroll draggable">
                     <div>
                         <div class="flex flex-row explore-gallery mt-14 ">
-                            <div class="px-3 pr-0 image-explore md:px-0 md:pr-16"> <img
-                                    src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/image-1.jpeg"
+                            <div class="px-3 pr-0 image-explore md:px-0 md:pr-16"> <img src="/image/Cover (1).png"
                                     alt="" class="object-cover w-full h-full rounded-3xl"> </div>
-                            <div class="px-3 pr-0 image-explore md:px-0 md:pr-16"> <img
-                                    src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/image-2.jpeg"
-                                    alt="" class="object-cover w-full h-full rounded-3xl"> </div>
-                            <div class="px-3 pr-0 image-explore md:px-0 md:pr-16"> <img
-                                    src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-House/image-3.jpeg"
+                            <div class="px-3 pr-0 image-explore md:px-0 md:pr-16"> <img src="/image/Cover.png" alt=""
+                                    class="object-cover w-full h-full rounded-3xl"> </div>
+                            <div class="px-3 pr-0 image-explore md:px-0 md:pr-16"> <img src="/image/Cover (1).png"
                                     alt="" class="object-cover w-full h-full rounded-3xl"> </div>
                         </div>
                     </div>
@@ -467,18 +464,14 @@
                     </div>
                 </div>
                 <div class="grid grid-flow-col grid-rows-2 gap-4 mt-12 md:gap-10 md:mt-24">
-                    <div class="row-span-2"> <img
-                            src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/porto-1.png"
-                            alt="workly" class="object-cover h-full rounded-lg md:rounded-xl w-px400"> </div>
-                    <div class="row-span-1"> <img
-                            src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/porto-2.png"
-                            alt="workly" class="object-cover h-full rounded-lg md:rounded-xl w-px400"> </div>
-                    <div class="row-span-1"> <img
-                            src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/porto-3.png"
-                            alt="workly" class="object-cover h-full rounded-lg md:rounded-xl w-px400"> </div>
-                    <div class="row-span-2"> <img
-                            src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-workly/porto-4.png"
-                            alt="workly" class="object-cover h-full rounded-lg md:rounded-xl w-px400"> </div>
+                    <div class="row-span-2"> <img src="/image/Cover.png" alt="workly"
+                            class="object-cover h-full rounded-lg md:rounded-xl w-px400"> </div>
+                    <div class="row-span-1"> <img src="/image/gambar1.png" alt="workly"
+                            class="object-cover h-full rounded-lg md:rounded-xl w-px400"> </div>
+                    <div class="row-span-1"> <img src="/image/gambar2.png" alt="workly"
+                            class="object-cover h-full rounded-lg md:rounded-xl w-px400"> </div>
+                    <div class="row-span-2"> <img src="/image/Cover (1).png" alt="workly"
+                            class="object-cover h-full rounded-lg md:rounded-xl w-px400"> </div>
                 </div>
             </main>
         </section> <!-- END: PRODUCTS -->

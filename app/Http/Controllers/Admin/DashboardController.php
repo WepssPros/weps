@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Calonvendor;
+use App\Models\ProductVendor;
 use App\Models\Transaction;
 use App\Models\TransactionItem;
 use Illuminate\Http\Request;
@@ -13,11 +14,19 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        $mitraaktif = ProductVendor::count();
 
          $transactions = Transaction::with(['user'])->latest()->paginate(5);
          $calonvendors = Calonvendor::with(['user'])->latest()->paginate(5);
+         $pesanansuccess = Transaction:: with(['user'])->where('status', "SUCCESS")->count();
+         $pesananpending = Transaction:: with(['user'])->where('status', "PENDING")->count();
+         $pesanancancel = Transaction:: with(['user'])->where('status', "CANCELLED")->count();
+         $pesananfailed = Transaction:: with(['user'])->where('status', "FAILED")->count();
 
+         $pendapatan = Transaction::where('status', "SUCCESS")->sum('total_price');
+         $pendapatandeposito = Transaction::where('status', "DPSUCCESS")->sum('deposito');
 
+         $pendapatankeseluruhan = $pendapatan + $pendapatandeposito;
 
         if(request()->ajax()) {
             $query = TransactionItem::with(['product','vendor','user','transaction']);
@@ -44,8 +53,16 @@ class DashboardController extends Controller
         }
 
         return view('pages.admin.dashboard.index', [
+             'mitraaktif' => $mitraaktif,
              'transactions' => $transactions,
              'calonvendors' => $calonvendors,
+             'pesanansuccess' => $pesanansuccess,
+             'pesananpending' => $pesananpending,
+             'pesanancancel' => $pesanancancel,
+             'pesananfailed' => $pesananfailed,
+             'pendapatan' => $pendapatan,
+             'pendapatandeposito' => $pendapatandeposito,
+             'pendapatankeseluruhan' => $pendapatankeseluruhan,
         ]);
     }
 }
