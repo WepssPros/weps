@@ -24,19 +24,19 @@
 
         <script src="{{ mix('js/app.js') }}" defer></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
         <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
         <script type="text/javascript" src="https://code.highcharts.com/highcharts-3d.js"></script>
         <script type="text/javascript" src="https://code.highcharts.com/modules/exporting.js"></script>
         <script type="text/javascript" src="https://code.highcharts.com/modules/export-data.js"></script>
         <script type="text/javascript" src="https://code.highcharts.com/modules/accessibility.js"></script>
 
-        <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
         <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/searchpanes/1.4.0/js/dataTables.searchPanes.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
-
+        <script src="https://cdn.datatables.net/plug-ins/1.12.1/api/sum().js"></script>
 
         <script src="https://www.google-analytics.com/analytics.js" async></script>
 
